@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../ENEANTECH-VITRINE"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ENEANTECH-VITRINE"
+	}
+}

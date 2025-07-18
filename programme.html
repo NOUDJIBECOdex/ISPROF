@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programme</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#003366',
+            accent: '#FFD700',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- ===== HEADER ===== -->
+  <header class="bg-primary text-white px-6 py-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">ISPROF</div>
+    <nav>
+      <ul class="hidden md:flex gap-6 text-lg">
+        <li><a href="index.html" class="hover:text-accent">Accueil</a></li>
+        <li><a href="formations.html" class="hover:text-accent">Formations</a></li>
+        <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== CONTENU DU PROGRAMME ===== -->
+  <main id="programme-content" class="max-w-4xl mx-auto p-6 mt-20 bg-white rounded-lg shadow-md">
+    <!-- Le contenu sera inséré ici par JavaScript -->
+  </main>
+
+  <script>
+    // Dictionnaire des programmes
+    const programmes = {
+      sante: {
+        titre: "Sciences de la Santé",
+        image: "images/sante.jpg",
+        description: "Formez-vous aux métiers de la santé : soins, laboratoires, nutrition, santé publique...",
+        objectifs: [
+          "Maîtriser les gestes médicaux et soins primaires",
+          "Comprendre le fonctionnement des laboratoires médicaux",
+          "Travailler en ONG ou dans des structures hospitalières",
+          "Promouvoir la santé communautaire"
+        ],
+        debouches: [
+          "Infirmier(ère)",
+          "Laborantin(e)",
+          "Technicien(ne) de santé publique",
+          "Nutritionniste",
+          "Assistant médical"
+        ]
+      },
+      informatique: {
+        titre: "Développement Informatique",
+        image: "images/informatique.jpg",
+        description: "Apprenez la programmation, le développement web, les bases de données et la cybersécurité.",
+        objectifs: [
+          "Créer des sites web et applications modernes",
+          "Gérer des bases de données sécurisées",
+          "Comprendre les systèmes d’information",
+          "Déployer des solutions digitales"
+        ],
+        debouches: [
+          "Développeur Web",
+          "Administrateur de base de données",
+          "Technicien réseau",
+          "Spécialiste cybersécurité",
+          "Webmaster"
+        ]
+      },
+      // Ajoute ici les autres programmes : gestion, droit, éducation, agriculture, communication, entrepreneuriat...
+    };
+
+    // Fonction pour extraire le paramètre "filiere"
+    function getFiliere() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("filiere");
+    }
+
+    function renderProgramme(filiere) {
+      const data = programmes[filiere];
+      const container = document.getElementById("programme-content");
+
+      if (!data) {
+        container.innerHTML = <h1 class="text-2xl text-red-600 font-bold">Formation introuvable</h1>;
+        return;
+      }
+
+      container.innerHTML = `
+        <img src="${data.image}" alt="${data.titre}" class="w-full h-64 object-cover rounded-md mb-6">
+        <h1 class="text-3xl font-bold text-primary mb-4">Programme : ${data.titre}</h1>
+
+        <section class="mb-6">
+          <h2 class="text-xl font-semibold text-gray-700 mb-2">Description</h2>
+          <p class="text-gray-600 leading-relaxed">${data.description}</p>
+        </section>
+
+        <section class="mb-6">
+          <h2 class="text-xl font-semibold text-gray-700 mb-2">Objectifs du programme</h2>
+          <ul class="list-disc list-inside text-gray-600 space-y-2">
+            ${data.objectifs.map(obj => <li>${obj}</li>).join('')}
+          </ul>
+        </section>
+
+        <section class="mb-6">
+          <h2 class="text-xl font-semibold text-gray-700 mb-2">Débouchés professionnels</h2>
+          <ul class="list-disc list-inside text-gray-600 space-y-2">
+            ${data.debouches.map(d => <li>${d}</li>).join('')}
+          </ul>
+        </section>
+
+        <div class="text-center mt-10">
+          <a href="formations.html" class="bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-800 transition">← Retour aux formations</a>
+        </div>
+      `;
+    }
+
+    const filiere = getFiliere();
+    renderProgramme(filiere);
+  </script>
+</body>
+</html>

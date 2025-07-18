@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ISPROF - Institut Supérieur de Formation</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/ISPROF-MAROUA.jpg" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#003366',
+            accent: '#FFD700',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800 scroll-smooth">
+
+  <!-- ===== HEADER ===== -->
+  <header class="bg-primary text-white px-6 py-2 flex justify-between items-center fixed top-0 left-0 w-full z-50 shadow">
+   <a href="#accueil" class="flex items-center space-x-2">
+      <img src="Images/ISPROF-MAROUA.jpg" alt="Logo ENEANTECH" class="h-13 w-14 object-cover rounded-full border-2 border-white shadow">
+      <span class="text-2xl font-bold text-white">ISPROF-MAROUA </span>
+    </a> 
+    
+    <nav class="hidden md:block">
+      <ul class="flex gap-6 text-lg">
+        <li><a href="#accueil" class="hover:text-accent">Accueil</a></li>
+        <li><a href="#apropos" class="hover:text-accent">À propos</a></li>
+        <li><a href="#formations" class="hover:text-accent">Formations</a></li>
+        <li><a href="#inscription" class="hover:text-accent">Inscription</a></li>
+        <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="accueil" class="relative h-screen bg-cover bg-center flex items-center justify-center text-center text-white pt-20" style="background-image: url('images/isprof-campus.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative z-10 max-w-xl px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Bienvenue à ISPROF</h1>
+      <p class="text-lg md:text-xl mb-6">Préparez votre avenir avec des formations de qualité dans les domaines les plus demandés.</p>
+      <a href="#formations" class="bg-accent text-primary font-semibold px-6 py-3 rounded-md hover:scale-105 transition">Voir les Formations</a>
+    </div>
+  </section>
+
+  <!-- ===== À PROPOS ===== -->
+  <section id="apropos" class="py-16 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-primary mb-4">À propos de ISPROF</h2>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        ISPROF (Institut des Professions) est un Institut Professionnel de Formation qui prépare les étudiants aux métiers de demain dans divers secteurs : santé, informatique, agriculture, communication, éducation, droit, entrepreneuriat et bien plus.
+        Nous combinons théorie et pratique pour offrir une formation de haut niveau adaptée au monde réel.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FORMATIONS ===== -->
+  <section id="formations" class="py-16 px-4 md:px-12 bg-gray-50">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-primary">Nos Formations</h2>
+      <p class="text-gray-600">Des parcours variés et orientés vers l'excellence professionnelle</p>
+    </div>
+    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <!-- Carte de formation (à dupliquer pour les 8 formations) -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+        <img src="images/sante.jpg" alt="Santé" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-bold text-primary mb-2">Sciences de la Santé</h3>
+          <p class="text-sm text-gray-600">Formations en soins, biologie médicale, nutrition, santé publique.</p>
+          <a href="programme.html?filiere=sante" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+        </div>
+      </div>
+
+       <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/biomedicale.jpg" alt="Informatique" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Sciences biomédicales</h2>
+        <p class="text-sm text-gray-600">Maîtrisez la programmation, les bases de données et la cybersécurité.</p>
+        <a href="programme.html?filiere=sante" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/infirmier2.jpg" alt="Informatique" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Sciences Infirmiéres</h2>
+        <p class="text-sm text-gray-600">Maîtrisez la programmation, les bases de données et la cybersécurité.</p>
+        <a href="programme.html?filiere=sante" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/imagerie.jpg" alt="Informatique" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Radiologie et Immagerie Médicale</h2>
+        <p class="text-sm text-gray-600">Maîtrisez la programmation, les bases de données et la cybersécurité.</p>
+        <a href="programme.html?filiere=sante" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+
+      <!-- Formation 2 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/informatiques.jpeg" alt="Informatique" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Développement Informatique</h2>
+        <p class="text-sm text-gray-600">Maîtrisez la programmation, les bases de données et la cybersécurité.</p>
+        <a href="programme.html?filiere=sante" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+       
+    <!-- Formation 3 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/gestion.jpeg" alt="Gestion" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Gestion et Comptabilité</h2>
+        <p class="text-sm text-gray-600">Acquérez les compétences pratiques en finances, audit, fiscalité...</p>
+        <a href="programme.html?filiere=sante" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+    <!-- Formation 4 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/droit.jpeg" alt="Droit" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Droit et Administration</h2>
+        <p class="text-sm text-gray-600">Formez-vous au droit civil, pénal, administratif et à la gestion publique.</p>
+        <a href="programme.html?filiere=sante" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+    <!-- Formation 5 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/education1.jpg" alt="Éducation" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Sciences de l'Éducation</h2>
+        <p class="text-sm text-gray-600">Apprenez la pédagogie, la psychologie éducative et l’enseignement pratique.</p>
+        <a href="programme.html?filiere=sante" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+    <!-- Formation 6 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/agriculture1.jpg" alt="Agriculture" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Agriculture et Développement rural</h2>
+        <p class="text-sm text-gray-600">Techniques agricoles modernes, gestion des ressources rurales...</p>
+        <a href="programme.html?filiere=sante" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+    <!-- Formation 7 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/Communication_media.webp" alt="Communication" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Communication et Médias</h2>
+        <p class="text-sm text-gray-600">Stratégies médiatiques, journalisme, relations publiques et numériques.</p>
+        <a href="programme.html?filiere=sante" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+    <!-- Formation 8 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/entrprenariat1.jpg" alt="Entrepreneuriat" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Entrepreneuriat et Leadership</h2>
+        <p class="text-sm text-gray-600">Créez, innovez, gérez vos projets avec stratégie et vision.</p>
+        <a href="programme.html" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/grh.jpg" alt="Informatique" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Gestion des Ressources Humaines </h2>
+        <p class="text-sm text-gray-600">Maîtrisez la programmation, les bases de données et la cybersécurité.</p>
+        <a href="programme.html?filiere=sante" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+
+
+    </div>
+    <div class="text-center mt-12">
+      <a href="formations.html" class="bg-primary text-white px-8 py-3 text-lg rounded-md font-semibold hover:bg-blue-800 transition"> Voir tous les programmes</a>
+    </div>
+  </section>
+
+  <!-- ===== INSCRIPTION ===== -->
+  <section id="inscription" class="py-16 px-4 bg-white">
+    <div class="max-w-2xl mx-auto bg-gray-100 p-8 rounded-lg shadow-md">
+      <h2 class="text-3xl font-bold mb-6 text-center text-primary">Inscription Rapide</h2>
+      <form>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input type="text" placeholder="Nom" class="p-3 border border-gray-300 rounded" required>
+          <input type="text" placeholder="Prénom" class="p-3 border border-gray-300 rounded" required>
+          <input type="email" placeholder="Email" class="p-3 border border-gray-300 rounded" required>
+          <input type="text" placeholder="Ville" class="p-3 border border-gray-300 rounded">
+          <select class="p-3 border border-gray-300 rounded" required>
+            <option value="">Sexe</option>
+            <option value="Homme">Homme</option>
+            <option value="Femme">Femme</option>
+          </select>
+          <input type="text" placeholder="Profession" class="p-3 border border-gray-300 rounded">
+        </div>
+        <button type="submit" class="mt-6 w-full bg-primary text-white font-semibold py-3 rounded hover:bg-blue-800 transition">Valider l'inscription ✅</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="py-16 px-6 bg-gray-50">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-primary mb-4">Contactez-nous</h2>
+      <p class="text-gray-600 mb-6">Pour toute question ou information complémentaire, n'hésitez pas à nous écrire.</p>
+      <a href="mailto:contact@isprof.org" class="inline-block bg-accent text-primary font-semibold px-6 py-3 rounded hover:bg-yellow-300">Envoyer un Email</a>
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+
+<footer class="bg-primary text-white text-center py-8 mt-10">
+  <div class="max-w-4xl mx-auto px-4">
+    <h4 class="text-xl font-semibold mb-2">Restons connectés</h4>
+    <p class="text-gray-300 mb-4">Suivez-nous sur nos réseaux pour ne rien manquer de nos innovations digitales.</p>
+
+    <!-- Réseaux sociaux -->
+    <div class="flex justify-center gap-6 mb-6">
+      <a href="https://www.facebook.com/https://www.facebook.com/profile.php?id=61572260336634" target="_blank" class="transition-transform transform hover:scale-125">
+        <img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" alt="Facebook" />
+      </a>
+      <a href="https://wa.me/+237697588977?text=Bonjour%20ENEANTECH%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20services" target="_blank" class="transition-transform transform hover:scale-125">
+        <img src="https://img.icons8.com/ios-filled/30/ffffff/whatsapp.png" alt="WhatsApp" />
+      </a>
+    </div>
+
+    <hr class="border-t border-white/20 my-4">
+
+    <p class="text-sm text-gray-300">
+      &copy; 2025 ISPROF. Tous droits réservés. | Made with ❤ in Africa.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

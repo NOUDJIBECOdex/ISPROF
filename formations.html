@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISPROF - Nos Formations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#003366',
+            accent: '#FFD700',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- ===== HEADER ===== -->
+  <header class="bg-primary text-white px-6 py-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">ISPROF</div>
+    <nav>
+      <ul class="hidden md:flex gap-6 text-lg">
+        <li><a href="index.html" class="hover:text-accent">Accueil</a></li>
+        <li><a href="formations.html" class="hover:text-accent">Formations</a></li>
+        <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== TITRE ===== -->
+  <section class="text-center py-12">
+    <h1 class="text-4xl font-bold text-primary mb-2">Nos Formations</h1>
+    <p class="text-lg text-gray-600">Découvrez nos filières professionnelles adaptées au marché de l'emploi</p>
+  </section>
+
+  <!-- ===== FORMATIONS ===== -->
+  <section class="px-4 md:px-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pb-12">
+
+    <!-- Formation 1 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/sante.jpg" alt="Filière Santé" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Sciences de la Santé</h2>
+        <p class="text-sm text-gray-600">Formez-vous aux métiers de la santé : soins, laboratoires, nutrition...</p>
+        <a href="#" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+    <!-- Formation 2 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/informatiques.jpeg" alt="Informatique" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Développement Informatique</h2>
+        <p class="text-sm text-gray-600">Maîtrisez la programmation, les bases de données et la cybersécurité.</p>
+        <a href="#" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+    <!-- Formation 3 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/gestion.jpg" alt="Gestion" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Gestion et Comptabilité</h2>
+        <p class="text-sm text-gray-600">Acquérez les compétences pratiques en finances, audit, fiscalité...</p>
+        <a href="#" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+    <!-- Formation 4 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/droit.jpg" alt="Droit" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Droit et Administration</h2>
+        <p class="text-sm text-gray-600">Formez-vous au droit civil, pénal, administratif et à la gestion publique.</p>
+        <a href="#" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+    <!-- Formation 5 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/education.jpg" alt="Éducation" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Sciences de l'Éducation</h2>
+        <p class="text-sm text-gray-600">Apprenez la pédagogie, la psychologie éducative et l’enseignement pratique.</p>
+        <a href="#" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+    <!-- Formation 6 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/agriculture.jpg" alt="Agriculture" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Agriculture et Développement rural</h2>
+        <p class="text-sm text-gray-600">Techniques agricoles modernes, gestion des ressources rurales...</p>
+        <a href="#" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+    <!-- Formation 7 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/communication.jpg" alt="Communication" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Communication et Médias</h2>
+        <p class="text-sm text-gray-600">Stratégies médiatiques, journalisme, relations publiques et numériques.</p>
+        <a href="#" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+    <!-- Formation 8 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <img src="images/entrepreneuriat.jpg" alt="Entrepreneuriat" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-primary mb-2">Entrepreneuriat et Leadership</h2>
+        <p class="text-sm text-gray-600">Créez, innovez, gérez vos projets avec stratégie et vision.</p>
+        <a href="#" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== BOUTON "VOIR TOUS LES PROGRAMMES" ===== -->
+  <div class="text-center pb-16">
+    <a href="#" class="inline-block bg-primary text-white px-8 py-3 text-lg rounded-md font-semibold hover:bg-blue-800 transition">Voir tous les programmes</a>
+  </div>
+
+</body>
+</html>
