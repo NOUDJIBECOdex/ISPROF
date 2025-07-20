@@ -125,8 +125,31 @@
 
   <!-- ===== BOUTON "VOIR TOUS LES PROGRAMMES" ===== -->
   <div class="text-center pb-16">
-    <a href="#" class="inline-block bg-primary text-white px-8 py-3 text-lg rounded-md font-semibold hover:bg-blue-800 transition">Voir tous les programmes</a>
+    <a href="index.html" class="inline-block bg-primary text-white px-8 py-3 text-lg rounded-md font-semibold hover:bg-blue-800 transition">Revenir à l'accueil</a>
   </div>
+
+  <button id="scrollToTop"
+        class="hidden fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-accent transition z-50">
+  ⬆️
+</button>
+
+<script>
+  const scrollBtn = document.getElementById('scrollToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.remove('hidden');
+    } else {
+      scrollBtn.classList.add('hidden');
+    }
+  });
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+
 
 </body>
 </html>

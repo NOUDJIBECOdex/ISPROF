@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programme</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Détails de la Formation | ISPROF</title>
+  <link rel="icon" href="images/isprof_maroua.jpg" type="image/png">
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -17,114 +20,175 @@
       }
     }
   </script>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
   <!-- ===== HEADER ===== -->
-  <header class="bg-primary text-white px-6 py-4 flex justify-between items-center">
-    <div class="text-2xl font-bold">ISPROF</div>
-    <nav>
-      <ul class="hidden md:flex gap-6 text-lg">
-        <li><a href="index.html" class="hover:text-accent">Accueil</a></li>
-        <li><a href="formations.html" class="hover:text-accent">Formations</a></li>
-        <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="bg-primary text-white px-6 py-4 shadow flex justify-between items-center">
+    <a href="index.html" class="text-2xl font-bold">← Retour à l'accueil</a>
+    <span class="font-semibold">ISPROF - Détails de la Formation</span>
   </header>
 
-  <!-- ===== CONTENU DU PROGRAMME ===== -->
-  <main id="programme-content" class="max-w-4xl mx-auto p-6 mt-20 bg-white rounded-lg shadow-md">
-    <!-- Le contenu sera inséré ici par JavaScript -->
-  </main>
+  <!-- ===== CONTENU DYNAMIQUE ===== -->
+  <section id="formation-detail" class="py-16 px-4 md:px-12 max-w-5xl mx-auto" data-aos="fade-up">
+    <!-- Contenu généré en JavaScript -->
+  </section>
 
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-primary text-white text-center py-6 mt-12">
+    <p class="text-sm text-gray-200">&copy; 2025 ISPROF. Tous droits réservés.</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800 });</script>
+
+  <!-- SCRIPT DE RENDU DYNAMIQUE -->
   <script>
-    // Dictionnaire des programmes
-    const programmes = {
+    const formations = {
       sante: {
         titre: "Sciences de la Santé",
         image: "images/sante.jpg",
-        description: "Formez-vous aux métiers de la santé : soins, laboratoires, nutrition, santé publique...",
-        objectifs: [
-          "Maîtriser les gestes médicaux et soins primaires",
-          "Comprendre le fonctionnement des laboratoires médicaux",
-          "Travailler en ONG ou dans des structures hospitalières",
-          "Promouvoir la santé communautaire"
-        ],
-        debouches: [
-          "Infirmier(ère)",
-          "Laborantin(e)",
-          "Technicien(ne) de santé publique",
-          "Nutritionniste",
-          "Assistant médical"
-        ]
+        description: `Un domaine pluridisciplinaire qui englobe l’ensemble des formations liées à la prévention,
+        au diagnostic, aux soins et à la recherche médicale. Prépare à des carrières dans les hôpitaux,
+        laboratoires, centres de santé, ONG et institutions publiques de santé.`
+      },
+      biomedicale: {
+        titre: "Sciences Biomédicales",
+        image: "images/biomedicale.jpg",
+        description: `Formez-vous à l’analyse biologique, microbiologie, hématologie, etc. Débouchés dans les laboratoires,
+        hôpitaux, ONG sanitaires et l'industrie pharmaceutique. Une filière d'avenir.`
+      },
+      infirmiere: {
+        titre: "Sciences Infirmières",
+        image: "images/infirmier2.jpg",
+        description: `Préparez-vous à devenir infirmier(ère) diplômé(e), prêt(e) à intervenir en hôpitaux, cliniques ou humanitaire.
+        Formation rigoureuse pour un rôle clé dans la santé communautaire.`
+      },
+        imagerie: {
+        titre: "Radiologie et Imagerie Medicale",
+        image: "images/imagerie.jpg",
+        description: `Préparez-vous à devenir infirmier(ère) diplômé(e), prêt(e) à intervenir en hôpitaux, cliniques ou humanitaire.
+        Formation rigoureuse pour un rôle clé dans la santé communautaire.`
       },
       informatique: {
         titre: "Développement Informatique",
-        image: "images/informatique.jpg",
-        description: "Apprenez la programmation, le développement web, les bases de données et la cybersécurité.",
-        objectifs: [
-          "Créer des sites web et applications modernes",
-          "Gérer des bases de données sécurisées",
-          "Comprendre les systèmes d’information",
-          "Déployer des solutions digitales"
-        ],
-        debouches: [
-          "Développeur Web",
-          "Administrateur de base de données",
-          "Technicien réseau",
-          "Spécialiste cybersécurité",
-          "Webmaster"
-        ]
+        image: "images/informatiques.jpeg",
+        description: `Apprenez la programmation, les bases de données, le développement web/mobile et cybersécurité.
+        Opportunités dans les entreprises, startups, freelance, écoles et administrations.`
       },
-      // Ajoute ici les autres programmes : gestion, droit, éducation, agriculture, communication, entrepreneuriat...
+      droit: {
+        titre: "Droit et Administration",
+        image: "images/droit.jpeg",
+        description: `Formez-vous à comprendre et appliquer la loi dans tous les domaines (civil, pénal, administratif).
+        Prépare aux métiers juridiques, gestion publique et entreprises.`
+      },
+      education: {
+        titre: "Sciences de l'Éducation",
+        image: "images/education1.jpg",
+        description: `Approfondissez vos compétences en pédagogie, psychologie éducative, didactique. Destinée aux futurs enseignants
+        et éducateurs.`
+      },
+      agriculture: {
+        titre: "Agriculture et Développement Rural",
+        image: "images/agriculture1.jpg",
+        description: `Maîtrisez les techniques agricoles modernes et la gestion des ressources. Formation pratique pour transformer
+        l’agriculture locale.`
+      },
+      communication: {
+        titre: "Communication et Médias",
+        image: "images/Communication_media.webp",
+        description: `Formez-vous au journalisme, relations publiques, communication digitale, médias audiovisuels.
+        Débouchés dans les entreprises, ONG, presse et agences.`
+      },
+      ingenierie: {
+        titre: "Domaine de l'Ingénierie",
+        image: "images/ingenerie.jpg",
+        description: `Travaux publics, BTP, réseaux électriques, énergie, hydraulique... Une voie pour bâtir les infrastructures
+        du Cameroun de demain.`
+      },
+      entrepreneuriat: {
+        titre: "Entrepreneuriat et Leadership",
+        image: "images/entrprenariat1.jpg",
+        description: `Créez, innovez, développez votre projet avec méthode. Une formation axée sur l’action,
+        la gestion et le leadership.`
+      },
+      grh: {
+        titre: "Gestion des Ressources Humaines",
+        image: "images/grh.jpg",
+        description: `Recrutement, formation, gestion du personnel et stratégie RH. Devenez un acteur essentiel
+        du développement des entreprises africaines.`
+      },
+      gestion: {
+        titre: "Gestion et Comptabilité",
+        image: "images/gestion.jpeg",
+        description: `Préparez-vous aux métiers de la finance, comptabilité, audit, fiscalité. Très recherchés
+        dans les entreprises, ONG et institutions publiques.`
+      }
     };
 
-    // Fonction pour extraire le paramètre "filiere"
-    function getFiliere() {
-      const params = new URLSearchParams(window.location.search);
-      return params.get("filiere");
+    // Fonction pour récupérer le paramètre de l'URL
+    function getParam(name) {
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name);
     }
 
-    function renderProgramme(filiere) {
-      const data = programmes[filiere];
-      const container = document.getElementById("programme-content");
+    const filiere = getParam('filiere');
+    const container = document.getElementById('formation-detail');
 
-      if (!data) {
-        container.innerHTML = <h1 class="text-2xl text-red-600 font-bold">Formation introuvable</h1>;
-        return;
-      }
-
+    if (filiere && formations[filiere]) {
+      const formation = formations[filiere];
       container.innerHTML = `
-        <img src="${data.image}" alt="${data.titre}" class="w-full h-64 object-cover rounded-md mb-6">
-        <h1 class="text-3xl font-bold text-primary mb-4">Programme : ${data.titre}</h1>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img src="${formation.image}" alt="${formation.titre}" class="w-full h-64 object-cover rounded mb-6">
+          <h1 class="text-3xl font-bold text-primary mb-4">${formation.titre}</h1>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">${formation.description}</p>
+          <a href="https://wa.me/+237690641227?text=Bonjour%20ISPROF%2C%20je%20souhaite%20plus%20d'informations%20sur%20la%20formation%20${encodeURIComponent(formation.titre)}"
+             target="_blank"
+             class="inline-block bg-accent text-primary font-semibold px-6 py-3 rounded hover:bg-yellow-300 transition">
+            📩 Contacter ISPROF sur WhatsApp
+          </a>
+          <a href="index.html#formations"
+   class="mt-4 inline-block text-primary underline hover:text-accent transition">
+  ← Retour à la liste des formations
+</a>
 
-        <section class="mb-6">
-          <h2 class="text-xl font-semibold text-gray-700 mb-2">Description</h2>
-          <p class="text-gray-600 leading-relaxed">${data.description}</p>
-        </section>
-
-        <section class="mb-6">
-          <h2 class="text-xl font-semibold text-gray-700 mb-2">Objectifs du programme</h2>
-          <ul class="list-disc list-inside text-gray-600 space-y-2">
-            ${data.objectifs.map(obj => <li>${obj}</li>).join('')}
-          </ul>
-        </section>
-
-        <section class="mb-6">
-          <h2 class="text-xl font-semibold text-gray-700 mb-2">Débouchés professionnels</h2>
-          <ul class="list-disc list-inside text-gray-600 space-y-2">
-            ${data.debouches.map(d => <li>${d}</li>).join('')}
-          </ul>
-        </section>
-
-        <div class="text-center mt-10">
-          <a href="formations.html" class="bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-800 transition">← Retour aux formations</a>
+        </div>
+      `;
+    } else {
+      container.innerHTML = `
+        <div class="text-center text-red-600 font-semibold text-xl">
+          😕 Désolé, cette formation n'existe pas ou n'est pas encore disponible.
         </div>
       `;
     }
-
-    const filiere = getFiliere();
-    renderProgramme(filiere);
   </script>
+
+  <button id="scrollToTop"
+        class="hidden fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-accent transition z-50">
+  ⬆️
+</button>
+
+<script>
+  const scrollBtn = document.getElementById('scrollToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.remove('hidden');
+    } else {
+      scrollBtn.classList.add('hidden');
+    }
+  });
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+
+
 </body>
 </html>
