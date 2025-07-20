@@ -359,6 +359,110 @@
   </div>
 </section>
 
+
+<!-- SECTION FORMULAIRE DE PRÉ-INSCRIPTION -->
+<section id="preinscription" class="py-20 bg-white px-4 md:px-8" data-aos="fade-up">
+  <div class="max-w-2xl mx-auto bg-gray-100 p-8 rounded shadow-md">
+    <h2 class="text-3xl font-bold text-blue-600 mb-6 text-center">📥 Pré-inscription en ligne</h2>
+    <form action="https://formspree.io/f/xjkogaek" method="POST" id="formPreinscription" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium mb-1">Nom complet</label>
+        <input type="text" name="nom" required class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1">Email</label>
+        <input type="email" name="email" required class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1">Téléphone</label>
+        <input type="tel" name="telephone" required class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1">Filière souhaitée</label>
+        <input type="text" name="filiere" required class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+      <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white font-semibold py-2 rounded">Envoyer la demande</button>
+    </form>
+    <p id="formMessage" class="text-green-600 text-center mt-4 hidden">✅ Merci ! Votre demande a été envoyée.</p>
+  </div>
+</section>
+
+<!-- SECTION GALERIE PHOTOS -->
+<section id="galerie" class="py-20 bg-gray-100" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-blue-600 text-center mb-10">📸 Galerie ISPROF</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-xl transition">
+        <img src="https://source.unsplash.com/600x400/?classroom,students" alt="Cours" class="w-full h-60 object-cover transform hover:scale-105 transition duration-300">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-xl transition">
+        <img src="https://source.unsplash.com/600x400/?training,education" alt="Formation" class="w-full h-60 object-cover transform hover:scale-105 transition duration-300">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-xl transition">
+        <img src="https://source.unsplash.com/600x400/?students,school" alt="Élèves" class="w-full h-60 object-cover transform hover:scale-105 transition duration-300">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-xl transition">
+        <img src="https://source.unsplash.com/600x400/?event,university" alt="Événement" class="w-full h-60 object-cover transform hover:scale-105 transition duration-300">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-xl transition">
+        <img src="https://source.unsplash.com/600x400/?education,teachers" alt="Formateurs" class="w-full h-60 object-cover transform hover:scale-105 transition duration-300">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow hover:shadow-xl transition">
+        <img src="https://source.unsplash.com/600x400/?school,success" alt="Diplôme" class="w-full h-60 object-cover transform hover:scale-105 transition duration-300">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION TÉMOIGNAGES -->
+<section id="temoignages" class="py-20 bg-white" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-blue-600 text-center mb-12">🎓 Témoignages de nos étudiants</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      
+      <!-- Témoignage 1 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-md transition">
+        <div class="flex items-center mb-4">
+          <img src="images/temoigne1 (1).jpg" alt="Étudiante" class="w-14 h-14 rounded-full mr-4">
+          <div>
+            <h4 class="font-semibold">Michelle R.</h4>
+            <p class="text-sm text-gray-600">Développeur Web</p>
+          </div>
+        </div>
+        <p class="text-gray-700 italic">"ISPROF m’a permis de trouver ma voie. Grâce à leurs formateurs qualifiés, j’ai décroché un stage dès la fin de ma formation."</p>
+      </div>
+
+      <!-- Témoignage 2 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-md transition">
+        <div class="flex items-center mb-4">
+          <img src="images/temoigne2.jpg" alt="Étudiant" class="w-14 h-14 rounded-full mr-4">
+          <div>
+            <h4 class="font-semibold">Nabil K.</h4>
+            <p class="text-sm text-gray-600">Technicien Réseaux</p>
+          </div>
+        </div>
+        <p class="text-gray-700 italic">"L’approche pratique d’ISPROF est ce qui fait la différence. On apprend vraiment le métier, pas juste la théorie."</p>
+      </div>
+
+      <!-- Témoignage 3 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-md transition">
+        <div class="flex items-center mb-4">
+          <img src="images/temoigne3.jpg" alt="Étudiante" class="w-14 h-14 rounded-full mr-4">
+          <div>
+            <h4 class="font-semibold">Noudjibé S.</h4>
+            <p class="text-sm text-gray-600">Gestion des Entreprises</p>
+          </div>
+        </div>
+        <p class="text-gray-700 italic">"Une ambiance familiale, des cours de qualité, et surtout un vrai accompagnement jusqu’à l’insertion professionnelle."</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
 <!-- Map Section -->
   <section class="py-16 bg-gray-100" id="map" data-aos="fade-up">
     <h2 class="text-3xl font-bold text-center text-primary mb-8">📍 Où nous trouver</h2>
@@ -367,6 +471,61 @@
         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
+
+
+  <!-- SECTION TIMELINE -->
+<section id="timeline" class="py-20 bg-gray-50" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-blue-600 text-center mb-12">🕓 Parcours étudiant chez ISPROF</h2>
+    <div class="relative border-l border-blue-500 pl-6 space-y-10">
+      
+      <!-- Étape 1 -->
+      <div class="relative">
+        <div class="absolute -left-3 w-6 h-6 bg-blue-500 rounded-full border-4 border-white"></div>
+        <h4 class="text-xl font-semibold">1️⃣ Pré-inscription en ligne</h4>
+        <p class="text-gray-700">Le candidat remplit le formulaire de pré-inscription via notre site officiel.</p>
+      </div>
+
+      <!-- Étape 2 -->
+      <div class="relative">
+        <div class="absolute -left-3 w-6 h-6 bg-blue-500 rounded-full border-4 border-white"></div>
+        <h4 class="text-xl font-semibold">2️⃣ Entretien ou test d'admission</h4>
+        <p class="text-gray-700">ISPROF évalue le profil du candidat pour l'orienter dans la filière adaptée.</p>
+      </div>
+
+      <!-- Étape 3 -->
+      <div class="relative">
+        <div class="absolute -left-3 w-6 h-6 bg-blue-500 rounded-full border-4 border-white"></div>
+        <h4 class="text-xl font-semibold">3️⃣ Inscription officielle</h4>
+        <p class="text-gray-700">L'étudiant valide son inscription et reçoit ses premiers documents académiques.</p>
+      </div>
+
+      <!-- Étape 4 -->
+      <div class="relative">
+        <div class="absolute -left-3 w-6 h-6 bg-blue-500 rounded-full border-4 border-white"></div>
+        <h4 class="text-xl font-semibold">4️⃣ Début des cours</h4>
+        <p class="text-gray-700">Les cours démarrent en présentiel ou en ligne avec des formateurs certifiés.</p>
+      </div>
+
+      <!-- Étape 5 -->
+      <div class="relative">
+        <div class="absolute -left-3 w-6 h-6 bg-blue-500 rounded-full border-4 border-white"></div>
+        <h4 class="text-xl font-semibold">5️⃣ Évaluations & stages</h4>
+        <p class="text-gray-700">L’étudiant participe aux examens, projets pratiques et stages professionnels.</p>
+      </div>
+
+      <!-- Étape 6 -->
+      <div class="relative">
+        <div class="absolute -left-3 w-6 h-6 bg-blue-500 rounded-full border-4 border-white"></div>
+        <h4 class="text-xl font-semibold">6️⃣ Remise du diplôme</h4>
+        <p class="text-gray-700">Après validation, l’étudiant reçoit son diplôme reconnu et entre dans le monde pro.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="py-16 px-6 bg-gray-50">
@@ -509,6 +668,28 @@
     };
 
     window.addEventListener("scroll", onScroll);
+  });
+</script>
+
+
+<script>
+  const form = document.getElementById("formPreinscription");
+  const message = document.getElementById("formMessage");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        message.classList.remove("hidden");
+      }
+    });
   });
 </script>
 
