@@ -19,8 +19,18 @@
       }
     }
   </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 </head>
 <body class="bg-gray-100 text-gray-800 scroll-smooth">
+<!--new ajout --> 
+  <!-- Loader -->
+<!--<div id="loader" class="fixed inset-0 bg-white z-[9999] flex items-center justify-center">
+  <div class="animate-spin rounded-full h-16 w-16 border-4 border-primary border-t-transparent"></div>
+</div>-->
+
+<!--new ajout -->
 
   <!-- ===== HEADER ===== -->
   <header class="bg-primary text-white px-6 py-2 flex justify-between items-center fixed top-0 left-0 w-full z-50 shadow">
@@ -38,12 +48,32 @@
         <li><a href="#contact" class="hover:text-accent">Contact</a></li>
       </ul>
     </nav>
+
+<!--new ajout -->
+     <!-- Bouton menu mobile -->
+<button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+  ☰
+</button>
+
+<!-- Menu mobile -->
+<nav id="mobile-menu" class="hidden md:hidden absolute right-6 top-16 bg-white text-primary rounded shadow p-4 w-56 z-50">
+  <ul class="flex flex-col gap-4 text-lg">
+    <li><a href="#accueil" class="hover:text-accent">Accueil</a></li>
+    <li><a href="#apropos" class="hover:text-accent">À propos</a></li>
+    <li><a href="#formations" class="hover:text-accent">Formations</a></li>
+    <li><a href="#inscription" class="hover:text-accent">Inscription</a></li>
+    <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+  </ul>
+</nav>
+
+<!--new ajout -->
+
   </header>
 
   <!-- ===== HERO SECTION ===== -->
   <section id="accueil" class="relative h-screen bg-cover bg-center flex items-center justify-center text-center text-white pt-20" style="background-image: url('images/isprof-campus.jpg');">
     <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-    <div class="relative z-10 max-w-xl px-4">
+    <div class="relative z-10 max-w-xl px-4" data-aos="fade-right">
       <h1 class="text-4xl md:text-5xl font-bold mb-6">Bienvenue à ISPROF</h1>
       <p class="text-lg md:text-xl mb-6">Préparez votre avenir avec des formations de qualité dans les domaines les plus demandés.</p>
       <a href="#formations" class="bg-accent text-primary font-semibold px-6 py-3 rounded-md hover:scale-105 transition">Voir les Formations</a>
@@ -52,7 +82,7 @@
 
   <!-- ===== À PROPOS ===== -->
   <section id="apropos" class="py-16 px-6 bg-white">
-    <div class="max-w-4xl mx-auto text-center">
+    <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
       <h2 class="text-3xl font-bold text-primary mb-4">À propos de ISPROF</h2>
       <p class="text-gray-700 text-lg leading-relaxed">
         ISPROF (Institut Supérieur des Professions) est un Institut Professionnel de Formation qui prépare les étudiants aux métiers de demain dans divers secteurs : santé, informatique, agriculture, communication, éducation, droit, entrepreneuriat et bien plus.
@@ -62,14 +92,14 @@
   </section>
 
   <!-- ===== FORMATIONS ===== -->
-  <section id="formations" class="py-16 px-4 md:px-12 bg-gray-50">
+  <section id="formations" class="py-16 px-4 md:px-12 bg-gray-50" data-aos="fade-up">
     <div class="text-center mb-10">
-      <h2 class="text-3xl font-bold text-primary">Nos Formations</h2>
+      <h2 class="text-3xl font-bold text-primary" data-aos="fade-up">Nos Formations</h2>
       <p class="text-gray-600">Des parcours variés et orientés vers l'excellence professionnelle</p>
     </div>
     <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-      <!-- Carte de formation (à dupliquer pour les 8 formations) -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+      <!-- Carte de formation (à dupliquer pour les differentes formations) -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">
         <img src="images/sante.jpg" alt="Santé" class="w-full h-48 object-cover">
         <div class="p-4">
           <h3 class="text-xl font-bold text-primary mb-2">Sciences de la Santé</h3>
@@ -83,7 +113,7 @@
         </div>
       </div>
 
-       <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+       <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition" data-aos="zoom-in">
       <img src="images/biomedicale.jpg" alt="Informatique" class="w-full h-48 object-cover">
       <div class="p-4">
         <h2 class="text-xl font-bold text-primary mb-2">Sciences biomédicales</h2>
@@ -93,7 +123,7 @@
       </div>
     </div>
 
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition" data-aos="zoom-in">
       <img src="images/infirmier2.jpg" alt="Informatique" class="w-full h-48 object-cover">
       <div class="p-4">
         <h2 class="text-xl font-bold text-primary mb-2">Sciences Infirmiéres</h2>
@@ -104,7 +134,7 @@
       </div>
     </div>
 
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition" data-aos="zoom-in">
       <img src="images/imagerie.jpg" alt="Informatique" class="w-full h-48 object-cover">
       <div class="p-4">
         <h2 class="text-xl font-bold text-primary mb-2">Radiologie et Immagerie Médicale</h2>
@@ -115,7 +145,7 @@
       </div>
     </div>
 
-     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition" data-aos="zoom-in">
       <img src="images/ingenerie.jpg" alt="Informatique" class="w-full h-48 object-cover">
       <div class="p-4">
         <h2 class="text-xl font-bold text-primary mb-2">Domaine de l'Ingenerie</h2>
@@ -131,7 +161,7 @@
 
 
       <!-- Formation 2 -->
-    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition" data-aos="zoom-in">
       <img src="images/informatiques.jpeg" alt="Informatique" class="w-full h-48 object-cover">
       <div class="p-4">
         <h2 class="text-xl font-bold text-primary mb-2">Développement Informatique</h2>
@@ -146,7 +176,7 @@
 
        
     <!-- Formation 3 -->
-    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition" data-aos="zoom-in">
       <img src="images/gestion.jpeg" alt="Gestion" class="w-full h-48 object-cover">
       <div class="p-4">
         <h2 class="text-xl font-bold text-primary mb-2">Gestion et Comptabilité</h2>
@@ -161,7 +191,7 @@
     </div>
 
     <!-- Formation 4 -->
-    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition" data-aos="zoom-in">
       <img src="images/droit.jpeg" alt="Droit" class="w-full h-48 object-cover">
       <div class="p-4">
         <h2 class="text-xl font-bold text-primary mb-2">Droit et Administration</h2>
@@ -175,7 +205,7 @@
     </div>
 
     <!-- Formation 5 -->
-    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition" data-aos="zoom-in">
       <img src="images/education1.jpg" alt="Éducation" class="w-full h-48 object-cover">
       <div class="p-4">
         <h2 class="text-xl font-bold text-primary mb-2">Sciences de l'Éducation</h2>
@@ -185,7 +215,7 @@
     </div>
 
     <!-- Formation 6 -->
-    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition" data-aos="zoom-in">
       <img src="images/agriculture1.jpg" alt="Agriculture" class="w-full h-48 object-cover">
       <div class="p-4">
         <h2 class="text-xl font-bold text-primary mb-2">Agriculture et Développement rural</h2>
@@ -195,7 +225,7 @@
     </div>
 
     <!-- Formation 7 -->
-    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition" data-aos="zoom-in">
       <img src="images/Communication_media.webp" alt="Communication" class="w-full h-48 object-cover">
       <div class="p-4">
         <h2 class="text-xl font-bold text-primary mb-2">Communication et Médias</h2>
@@ -205,7 +235,7 @@
     </div>
 
     <!-- Formation 8 -->
-    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition" data-aos="zoom-in">
       <img src="images/entrprenariat1.jpg" alt="Entrepreneuriat" class="w-full h-48 object-cover">
       <div class="p-4">
         <h2 class="text-xl font-bold text-primary mb-2">Entrepreneuriat et Leadership</h2>
@@ -214,7 +244,7 @@
       </div>
     </div>
 
-     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition">
+     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition" data-aos="zoom-in">
       <img src="images/grh.jpg" alt="Informatique" class="w-full h-48 object-cover">
       <div class="p-4">
         <h2 class="text-xl font-bold text-primary mb-2">Gestion des Ressources Humaines </h2>
@@ -231,7 +261,7 @@
 
     </div>
     <div class="text-center mt-12">
-      <a href="formations.html" class="bg-primary text-white px-8 py-3 text-lg rounded-md font-semibold hover:bg-blue-800 transition"> Voir tous les programmes</a>
+      <a href="formations.html" class="bg-primary text-white px-8 py-3 text-lg rounded-md font-semibold hover:bg-blue-800 transition" data-aos="fade-up" data-aos-delay="300"> Voir tous les programmes</a>
     </div>
   </section>
 
@@ -297,5 +327,30 @@
     </p>
   </div>
 </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+
+  <!-- Loader script -->
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      loader.classList.add('opacity-0');
+      setTimeout(() => loader.remove(), 500);
+    });
+  </script>
+
+  <!-- Mobile menu toggle -->
+  <script>
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    });
+  </script>
+
+
 </body>
 </html>
