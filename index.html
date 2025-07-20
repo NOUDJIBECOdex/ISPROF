@@ -50,19 +50,20 @@
     </nav>
 
 <!--new ajout -->
-     <!-- Bouton menu mobile -->
-<button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+     <!-- Bouton menu mobile-->
+<button id="menu-toggle" class="md:hidden text-white focus:outline-none" onclick="toggleMenu()">
   ☰
-</button>
+</button> 
+
 
 <!-- Menu mobile -->
 <nav id="mobile-menu" class="hidden md:hidden absolute right-6 top-16 bg-white text-primary rounded shadow p-4 w-56 z-50">
   <ul class="flex flex-col gap-4 text-lg">
-    <li><a href="#accueil" class="hover:text-accent">Accueil</a></li>
-    <li><a href="#apropos" class="hover:text-accent">À propos</a></li>
-    <li><a href="#formations" class="hover:text-accent">Formations</a></li>
-    <li><a href="#inscription" class="hover:text-accent">Inscription</a></li>
-    <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+    <li><a href="#accueil" class="hover:text-accent" onclick="closeMenu()">Accueil</a></li>
+    <li><a href="#apropos" class="hover:text-accent" onclick="closeMenu()">À propos</a></li>
+    <li><a href="#formations" class="hover:text-accent" onclick="closeMenu()">Formations</a></li>
+    <li><a href="#inscription" class="hover:text-accent" onclick="closeMenu()">Inscription</a></li>
+    <li><a href="#contact" class="hover:text-accent" onclick="closeMenu()">Contact</a></li>
   </ul>
 </nav>
 
@@ -91,6 +92,28 @@
     </div>
   </section>
 
+    <!-- SECTION COMPTEURS -->
+<section class="py-16 bg-gray-100" id="stats" data-aos="fade-up">
+  <div class="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div>
+      <h3 class="text-4xl font-bold text-blue-600" data-target="1000">0+</h3>
+      <p class="mt-2 text-sm">Étudiants formés</p>
+    </div>
+    <div>
+      <h3 class="text-4xl font-bold text-blue-600" data-target="20">0+</h3>
+      <p class="mt-2 text-sm">Formateurs qualifiés</p>
+    </div>
+    <div>
+      <h3 class="text-4xl font-bold text-blue-600" data-target="15">0+</h3>
+      <p class="mt-2 text-sm">Filières accréditées</p>
+    </div>
+    <div>
+      <h3 class="text-4xl font-bold text-blue-600" data-target="3">0+</h3>
+      <p class="mt-2 text-sm">Villes desservies</p>
+    </div>
+  </div>
+</section>
+
   <!-- ===== FORMATIONS ===== -->
   <section id="formations" class="py-16 px-4 md:px-12 bg-gray-50" data-aos="fade-up">
     <div class="text-center mb-10">
@@ -107,7 +130,7 @@
               Un domaine pluridisciplinaire qui englobe l’ensemble des formations liées à la prévention,
               au diagnostic, aux soins et à la recherche médicale. Les sciences de la santé préparent à
               des carrières essentielles dans les hôpitaux, laboratoires, centres de santé, ONG et institutions
-              publiques de santé.
+              publiques de santé.
             </p>
           <a href="programme.html?filiere=sante" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
         </div>
@@ -158,7 +181,6 @@
         <a href="programme.html?filiere=ingenierie" class="inline-block mt-4 bg-accent text-primary font-semibold px-4 py-2 rounded hover:bg-yellow-300">Détails</a>
       </div>
     </div>
-
 
       <!-- Formation 2 -->
     <div class="bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="600">
@@ -258,10 +280,26 @@
     </div>
 
 
-
     </div>
     <div class="text-center mt-12">
       <a href="formations.html" class="bg-primary text-white px-8 py-3 text-lg rounded-md font-semibold hover:bg-blue-800 transition" data-aos="fade-up" data-aos-delay="300"> Voir tous les programmes</a>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="bg-white py-16 px-4" id="faq" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center text-primary mb-8">❓ Questions fréquentes</h2>
+    <div class="max-w-2xl mx-auto space-y-4">
+      <div class="border rounded p-4 cursor-pointer bg-gray-50" onclick="toggleAnswer(this)">
+        <h3 class="font-semibold text-lg">Quels sont les frais d'inscription ?</h3>
+        <p class="hidden text-sm mt-2">Les frais sont variables selon la filière. Contactez-nous pour les détails.</p>
+      </div>
+      <div class="border rounded p-4 cursor-pointer bg-gray-50" onclick="toggleAnswer(this)">
+        <h3 class="font-semibold text-lg">L'institut est-il reconnu par l'État ?</h3>
+        <p class="hidden text-sm mt-2">Oui, ISPROF est reconnu et agréé par le Ministère de l'Enseignement
+           Superieur <span>MINSUP</span> et aussi par le Ministère de la Formation Professionnelle 
+           <span>MINFOP</span>.</p>
+      </div>
     </div>
   </section>
 
@@ -289,7 +327,44 @@
       ✅ Votre inscription a bien été envoyée !
     </div>
 
+    </div>
+  </section>
 
+  <section id="blog" class="py-20 bg-gray-50 px-4 md:px-12" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-center text-primary mb-10">📰 Nos Actualités</h2>
+  <div class="grid md:grid-cols-3 gap-8">
+    <!-- Article 1 -->
+    <div class="bg-white rounded shadow p-4">
+      <img src="images/blog1.jpg" class="rounded mb-4 h-48 w-full object-cover" alt="Actu 1">
+      <h3 class="text-xl font-semibold text-primary">Journée Portes Ouvertes</h3>
+      <p class="text-sm text-gray-600 mt-2">Retour en images sur notre dernière JPO organisée à Maroua.</p>
+    </div>
+    <!-- Article 2 -->
+    <div class="bg-white rounded shadow p-4">
+      <img src="images/blog2.jpg" class="rounded mb-4 h-48 w-full object-cover" alt="Actu 2">
+      <h3 class="text-xl font-semibold text-primary">Partenariat ISPROF & ONG</h3>
+      <p class="text-sm text-gray-600 mt-2">Un nouveau partenariat pour plus d'opportunités d'insertion.</p>
+    </div>
+    <!-- Article 3 -->
+    <div class="bg-white rounded shadow p-4">
+      <img src="images/blog3.jpg" class="rounded mb-4 h-48 w-full object-cover" alt="Actu 3">
+      <h3 class="text-xl font-semibold text-primary">Témoignage d’un ancien</h3>
+      <p class="text-sm text-gray-600 mt-2">Découvrez le parcours inspirant de Paul, diplômé 2023 en informatique.</p>
+    </div>
+  </div>
+  <div class="text-center mt-10">
+    <a href="blog.html" class="bg-primary text-white py-2 px-6 rounded hover:bg-accent transition">
+      Voir toutes les actualités →
+    </a>
+  </div>
+</section>
+
+<!-- Map Section -->
+  <section class="py-16 bg-gray-100" id="map" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center text-primary mb-8">📍 Où nous trouver</h2>
+    <div class="max-w-5xl mx-auto px-4">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="350" class="rounded shadow"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
 
@@ -301,7 +376,6 @@
       <a href="mailto:contact@isprof.org" class="inline-block bg-accent text-primary font-semibold px-6 py-3 rounded hover:bg-yellow-300">Envoyer un Email</a>
     </div>
   </section>
-
 
   <!-- ===== FOOTER ===== -->
 
@@ -361,6 +435,34 @@
   ⬆️
 </button>
 
+<!-- WhatsApp Contact -->
+  <a href="https://wa.me/237690641227" target="_blank"
+    class="fixed bottom-6 left-6 bg-green-500 text-white p-3 rounded-full shadow-lg z-50 hover:bg-green-600">💬</a>
+
+
+    <script>
+  function toggleAnswer(el) {
+    const answer = el.querySelector("p");
+    answer.classList.toggle("hidden");
+  }
+</script>
+
+<script>
+  function closeMenu() {
+    const menu = document.getElementById('mobile-menu');
+    if (menu.classList.contains('block')) {
+      menu.classList.remove('block');
+      menu.classList.add('hidden');
+    }
+    function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('block');
+
+  }
+  }
+</script>
+
 
 <script>
   const scrollBtn = document.getElementById('scrollToTop');
@@ -376,10 +478,42 @@
   scrollBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+  </script>
+
+
+<script>
+  // Animation des compteurs
+  const counters = document.querySelectorAll("[data-target]");
+  const speed = 80;
+
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-target");
+      const count = +counter.innerText.replace('+', '');
+      const inc = Math.ceil(target / speed);
+
+      if (count < target) {
+        counter.innerText = `${count + inc}+`;
+        setTimeout(updateCount, 50);
+      } else {
+        counter.innerText = `${target}+`;
+      }
+    };
+
+    const onScroll = () => {
+      const top = counter.getBoundingClientRect().top;
+      if (top < window.innerHeight && !counter.dataset.counted) {
+        counter.dataset.counted = true;
+        updateCount();
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+  });
 </script>
 
 
 
-
 </body>
-</html>
+</html> 
+
