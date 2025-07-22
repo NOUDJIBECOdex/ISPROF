@@ -81,6 +81,19 @@
     </div>
   </section>
 
+
+<style>
+  .animate-fadeIn {
+    animation: fadeIn 0.4s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+</style>
+
+
   <!-- ===== À PROPOS ===== -->
   <section id="apropos" class="py-16 px-6 bg-white">
     <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
@@ -285,6 +298,52 @@
       <a href="formations.html" class="bg-primary text-white px-8 py-3 text-lg rounded-md font-semibold hover:bg-blue-800 transition" data-aos="fade-up" data-aos-delay="300"> Voir tous les programmes</a>
     </div>
   </section>
+
+  <!-- SECTION STATISTIQUES VISUELLES -->
+<section id="stats" class="py-20 bg-gray-100" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-blue-600 mb-12">📊 Nos chiffres parlent pour nous</h2>
+    
+    <!-- COMPTEURS -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <div>
+        <h3 class="text-5xl font-bold text-blue-600"><span class="counter" data-target="1200">0</span>+</h3>
+        <p class="text-gray-700 mt-2">Étudiants formés</p>
+      </div>
+      <div>
+        <h3 class="text-5xl font-bold text-blue-600"><span class="counter" data-target="98">0</span>%</h3>
+        <p class="text-gray-700 mt-2">Taux de réussite</p>
+      </div>
+      <div>
+        <h3 class="text-5xl font-bold text-blue-600"><span class="counter" data-target="20">0</span>+</h3>
+        <p class="text-gray-700 mt-2">Formations disponibles</p>
+      </div>
+    </div>
+
+    <!-- BARRES DE PROGRESSION -->
+    <div class="text-left space-y-6 max-w-3xl mx-auto">
+      <div>
+        <p class="text-gray-700 font-medium mb-2">Satisfaction globale</p>
+        <div class="w-full bg-gray-300 h-4 rounded-full">
+          <div class="bg-blue-600 h-4 rounded-full" style="width: 95%;"></div>
+        </div>
+      </div>
+      <div>
+        <p class="text-gray-700 font-medium mb-2">Taux d'insertion professionnelle</p>
+        <div class="w-full bg-gray-300 h-4 rounded-full">
+          <div class="bg-green-500 h-4 rounded-full" style="width: 89%;"></div>
+        </div>
+      </div>
+      <div>
+        <p class="text-gray-700 font-medium mb-2">Recommandation par les anciens</p>
+        <div class="w-full bg-gray-300 h-4 rounded-full">
+          <div class="bg-yellow-500 h-4 rounded-full" style="width: 92%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- FAQ Section -->
   <section class="bg-white py-16 px-4" id="faq" data-aos="fade-up">
@@ -573,6 +632,26 @@
 </section>
 
 
+<!-- SECTION VIDÉO DE PRÉSENTATION -->
+<section id="video" class="py-20 bg-white" data-aos="fade-up">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-blue-600 mb-6">🎦 Présentation de ISPROF</h2>
+    <p class="text-gray-700 mb-8">Découvrez en vidéo notre institut, nos valeurs, et ce que nous offrons à nos étudiants.</p>
+    
+    <div class="aspect-w-16 aspect-h-9 w-full shadow-xl rounded-lg overflow-hidden">
+      <iframe class="w-full h-full"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="Présentation ISPROF"
+        allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        frameborder="0">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+
 
 
   <!-- ===== CONTACT ===== -->
@@ -583,6 +662,25 @@
       <a href="mailto:contact@isprof.org" class="inline-block bg-accent text-primary font-semibold px-6 py-3 rounded hover:bg-yellow-300">Envoyer un Email</a>
     </div>
   </section>
+
+
+
+<!-- SECTION ESPACE ÉTUDIANT -->
+<section class="py-20 bg-gray-100" id="espace-etudiant">
+  <div class="max-w-5xl mx-auto text-center px-4">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">🎓 Espace Étudiant</h2>
+    <p class="text-gray-600 mb-6">
+      Vous êtes déjà inscrit à ISPROF ? Accédez à votre espace personnel pour suivre vos cours, consulter vos documents et rester en contact avec vos formateurs.
+    </p>
+    <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition duration-300">
+      Se connecter à l’espace étudiant
+    </a>
+    <p class="text-sm text-gray-500 mt-3 italic">Accès réservé aux étudiants inscrits. Plateforme en cours de développement.</p>
+  </div>
+</section>
+
+
+
 
   <!-- ===== FOOTER ===== -->
 
@@ -690,8 +788,7 @@
 
 <script>
   // Animation des compteurs
-  const counters = document.querySelectorAll("[data-target]");
-  const speed = 80;
+ 
 
   counters.forEach(counter => {
     const updateCount = () => {
@@ -743,6 +840,73 @@
 
 
 
+<script>
+  const counters = document.querySelectorAll('.counter');
+  const speed = 150;
+
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = Math.ceil(target / speed);
+
+      if (count < target) {
+        counter.innerText = count + increment;
+        setTimeout(updateCount, 30);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        updateCount();
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(counter);
+  });
+</script>
+
+
+
+<script>
+  // Affiche après 10 secondes
+  setTimeout(() => {
+    const popup = document.getElementById("popup-inscription");
+    if (popup) popup.classList.remove("hidden");
+  }, 10000);
+
+  // Fermer le pop-up
+  function closePopup() {
+    const popup = document.getElementById("popup-inscription");
+    if (popup) popup.classList.add("hidden");
+  }
+</script>
+
+
+
+
 </body>
+
+
+<!-- 🔔 BANNIÈRE D’ANNONCE FIXE -->
+<div id="banniere-annonce" class="fixed top-0 left-60 max-w-6xl ml-2 bg-opacity-60 text-gray-300 text-center py-3 px-4 z-50 flex items-center justify-center gap-4 shadow-md">
+  <span class="text-sm sm:text-base font-semibold">
+    🎉 Inscriptions ouvertes – Cliquez ici pour réserver votre place !
+  </span>
+  <a href="preinscription" class="bg-accent text-white text-sm px-3 py-1 rounded hover:bg-gray-800 transition">
+    Je m’inscris
+  </a>
+  <button onclick="document.getElementById('banniere-annonce').style.display='none'" class="text-xl font-bold leading-none ml-2 hover:text-red-600">
+    &times;
+  </button>
+</div>
+
+<!-- ESPACE POUR NE PAS CACHER LE HEADER -->
+<div class="h-[54px]"></div>
+
+
 </html> 
 
