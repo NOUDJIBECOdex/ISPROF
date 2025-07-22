@@ -21,7 +21,7 @@
   </script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
+k
 </head>
 <body class="bg-gray-100 text-gray-800 scroll-smooth">
 <!--new ajout --> 
@@ -44,13 +44,13 @@
         <li><a href="#accueil" class="hover:text-accent">Accueil</a></li>
         <li><a href="#apropos" class="hover:text-accent">À propos</a></li>
         <li><a href="#formations" class="hover:text-accent">Formations</a></li>
-        <li><a href="#inscription" class="hover:text-accent">Inscription</a></li>
-        <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+        <li><a href="inscription.html" class="hover:text-accent">Inscription</a></li>
+        <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
       </ul>
     </nav>
 
 <!--new ajout -->
-     <!-- Bouton menu mobile-->
+   <!-- Bouton menu mobile-->
 <button id="menu-toggle" class="md:hidden text-white focus:outline-none" onclick="toggleMenu()">
   ☰
 </button> 
@@ -62,8 +62,8 @@
     <li><a href="#accueil" class="hover:text-accent" onclick="closeMenu()">Accueil</a></li>
     <li><a href="#apropos" class="hover:text-accent" onclick="closeMenu()">À propos</a></li>
     <li><a href="#formations" class="hover:text-accent" onclick="closeMenu()">Formations</a></li>
-    <li><a href="#inscription" class="hover:text-accent" onclick="closeMenu()">Inscription</a></li>
-    <li><a href="#contact" class="hover:text-accent" onclick="closeMenu()">Contact</a></li>
+    <li><a href="inscription.html" class="hover:text-accent" onclick="closeMenu()">Inscription</a></li>
+    <li><a href="contact.html" class="hover:text-accent" onclick="closeMenu()">Contact</a></li>
   </ul>
 </nav>
 
@@ -418,33 +418,67 @@
   </div>
 </section>
 
-
-<!-- SECTION FORMULAIRE DE PRÉ-INSCRIPTION -->
+<!-- Formulaire de Pré-inscription amélioré -->
 <section id="preinscription" class="py-20 bg-white px-4 md:px-8" data-aos="fade-up">
   <div class="max-w-2xl mx-auto bg-gray-100 p-8 rounded shadow-md">
     <h2 class="text-3xl font-bold text-blue-600 mb-6 text-center">📥 Pré-inscription en ligne</h2>
-    <form action="https://formspree.io/f/xjkogaek" method="POST" id="formPreinscription" class="space-y-4">
+    <form action="https://formspree.io/f/xjkogaek" method="POST" enctype="multipart/form-data" id="formPreinscription" class="space-y-4">
+      
       <div>
         <label class="block text-sm font-medium mb-1">Nom complet</label>
-        <input type="text" name="nom" required class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <input type="text" name="nom" required class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
+
       <div>
         <label class="block text-sm font-medium mb-1">Email</label>
-        <input type="email" name="email" required class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <input type="email" name="email" required class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
+
       <div>
         <label class="block text-sm font-medium mb-1">Téléphone</label>
-        <input type="tel" name="telephone" required class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <input type="tel" name="telephone" required class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
+
       <div>
         <label class="block text-sm font-medium mb-1">Filière souhaitée</label>
-        <input type="text" name="filiere" required class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <select name="filiere" required class="w-full border rounded px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="" disabled selected>-- Choisissez une filière --</option>
+          <option>Sciences biomédicales</option>
+          <option>Sciences Infirmiéres</option>
+          <option>Sciences pharmaceutique</option>
+          <option>Sage Femme</option>
+          <option>Radiologie et imagerie médicale</option>
+          <option>Délégué Médicale</option>
+          <option>Informatique de gestion</option>
+          <option>Comptabilité</option>
+          <option>Marketing digital</option>
+          <option>Gestion des ressources humaines</option>
+          <option>Réseaux et télécoms</option>
+        </select>
       </div>
-      <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white font-semibold py-2 rounded">Envoyer la demande</button>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Joindre une pièce (relevé, pièce d'identité...)</label>
+        <input type="file" name="document" accept=".pdf,.jpg,.jpeg,.png" class="w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-white file:bg-blue-600 hover:file:bg-blue-700">
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1">Message (optionnel)</label>
+        <textarea name="message" rows="3" placeholder="Précisez un besoin ou une question…" class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+
+      <div class="flex items-start">
+        <input type="checkbox" id="rgpd" required class="mt-1 mr-2">
+        <label for="rgpd" class="text-sm text-gray-600">J’accepte que mes données soient utilisées pour le traitement de cette demande.</label>
+      </div>
+
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded transition duration-300">Envoyer la demande</button>
     </form>
+
     <p id="formMessage" class="text-green-600 text-center mt-4 hidden">✅ Merci ! Votre demande a été envoyée.</p>
   </div>
 </section>
+
 
 <!-- SECTION GALERIE PHOTOS -->
 <section id="galerie" class="py-20 bg-gray-100" data-aos="fade-up">
@@ -649,20 +683,7 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="py-16 px-6 bg-gray-50">
-    <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-primary mb-4">Contactez-nous</h2>
-      <p class="text-gray-600 mb-6">Pour toute question ou information complémentaire, n'hésitez pas à nous écrire.</p>
-      <a href="mailto:contact@isprof.org" class="inline-block bg-accent text-primary font-semibold px-6 py-3 rounded hover:bg-yellow-300">Envoyer un Email</a>
-    </div>
-  </section>
-
+     
 
 
 <!-- SECTION ESPACE ÉTUDIANT -->
@@ -672,7 +693,7 @@
     <p class="text-gray-600 mb-6">
       Vous êtes déjà inscrit à ISPROF ? Accédez à votre espace personnel pour suivre vos cours, consulter vos documents et rester en contact avec vos formateurs.
     </p>
-    <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition duration-300">
+    <a href="login.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition duration-300">
       Se connecter à l’espace étudiant
     </a>
     <p class="text-sm text-gray-500 mt-3 italic">Accès réservé aux étudiants inscrits. Plateforme en cours de développement.</p>
@@ -892,7 +913,7 @@
 
 
 <!-- 🔔 BANNIÈRE D’ANNONCE FIXE -->
-<div id="banniere-annonce" class="fixed top-0 left-60 max-w-6xl ml-2 bg-opacity-60 text-gray-300 text-center py-3 px-4 z-50 flex items-center justify-center gap-4 shadow-md">
+<!--<div id="banniere-annonce" class="fixed top-0 left-60 max-w-6xl ml-2 bg-opacity-60 text-gray-300 text-center py-3 px-4 z-50 flex items-center justify-center gap-4 shadow-md">
   <span class="text-sm sm:text-base font-semibold">
     🎉 Inscriptions ouvertes – Cliquez ici pour réserver votre place !
   </span>
@@ -902,10 +923,10 @@
   <button onclick="document.getElementById('banniere-annonce').style.display='none'" class="text-xl font-bold leading-none ml-2 hover:text-red-600">
     &times;
   </button>
-</div>
+</div> -->
 
 <!-- ESPACE POUR NE PAS CACHER LE HEADER -->
-<div class="h-[54px]"></div>
+<!--<div class="h-[54px]"></div>-->
 
 
 </html> 

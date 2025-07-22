@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription - ISPROF</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/isprof_maroua.jpg" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header simplifié -->
+  <header class="bg-blue-600 text-white py-4 shadow">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">🎓 ISPROF</h1>
+      <a href="index.html" class="text-sm underline hover:text-gray-200">← Retour à l'accueil</a>
+    </div>
+  </header>
+
+  <!-- Section d'inscription -->
+  <section class="py-12 px-4">
+    <div class="max-w-3xl mx-auto bg-white p-8 rounded shadow-md">
+      <h2 class="text-3xl font-bold text-center text-blue-600 mb-6">Créer un compte étudiant</h2>
+
+      <form action="https://formspree.io/f/xjkogaek" method="POST" enctype="multipart/form-data" class="space-y-6">
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">Nom</label>
+            <input type="text" name="nom" required class="w-full border rounded px-4 py-2">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Prénom</label>
+            <input type="text" name="prenom" required class="w-full border rounded px-4 py-2">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Adresse email</label>
+          <input type="email" name="email" required class="w-full border rounded px-4 py-2">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Mot de passe</label>
+          <input type="password" name="password" required class="w-full border rounded px-4 py-2">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Téléphone</label>
+          <input type="tel" name="telephone" required class="w-full border rounded px-4 py-2">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Filière souhaitée</label>
+          <select name="filiere" required class="w-full border rounded px-4 py-2 bg-white">
+            <option value="" disabled selected>-- Sélectionnez --</option>
+            <option>Informatique</option>
+            <option>Comptabilité</option>
+            <option>Ressources Humaines</option>
+            <option>Marketing Digital</option>
+            <option>Réseaux et Télécoms</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Joindre une pièce d'identité</label>
+          <input type="file" name="document" accept=".pdf,.jpg,.png" class="w-full border rounded px-4 py-2">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Message (optionnel)</label>
+          <textarea name="message" rows="3" class="w-full border rounded px-4 py-2"></textarea>
+        </div>
+
+        <div class="flex items-start">
+          <input type="checkbox" id="rgpd" required class="mt-1 mr-2">
+          <label for="rgpd" class="text-sm text-gray-700">J'accepte que mes données soient traitées conformément à la politique de confidentialité.</label>
+        </div>
+
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Créer mon compte</button>
+      </form>
+
+      <p class="text-sm text-center mt-4">Déjà inscrit ? <a href="login.html" class="text-blue-600 underline">Se connecter</a></p>
+    </div>
+  </section>
+
+</body>
+</html>

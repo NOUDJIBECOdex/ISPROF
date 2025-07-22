@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - ISPROF</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/isprof_maroua.jpg" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white py-4">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">📞 Contact - ISPROF</h1>
+      <a href="index.html" class="text-sm underline hover:text-gray-200">← Retour à l'accueil</a>
+    </div>
+  </header>
+
+  <!-- Section de contact -->
+  <section class="py-12 px-4">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+
+      <!-- Formulaire de contact -->
+      <div class="bg-white p-6 rounded shadow">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">Envoyer un message</h2>
+        <form action="https://formspree.io/f/xjkogaek" method="POST" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">Nom complet</label>
+            <input type="text" name="nom" required class="w-full border rounded px-4 py-2">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Email</label>
+            <input type="email" name="email" required class="w-full border rounded px-4 py-2">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Message</label>
+            <textarea name="message" rows="4" required class="w-full border rounded px-4 py-2"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Envoyer</button>
+        </form>
+      </div>
+
+      <!-- Infos de contact et carte -->
+      <div class="space-y-6">
+        <div class="bg-white p-6 rounded shadow">
+          <h2 class="text-2xl font-bold mb-4 text-blue-600">Coordonnées</h2>
+          <p><strong>Email :</strong> isprofm909@gmail.com</p>
+          <p><strong>Téléphone :</strong> +237 690 64 12 27 / 695 57 36 55</p>
+          <p><strong>Adresse :</strong> Maroua, Louguéo, Derriére la Pharmacie de Dougoi</p>
+          <p><strong>Heures d'ouverture :</strong> Lun - Ven : 8h - 17h</p>
+        </div>
+
+        <!-- Carte Google Maps intégrée -->
+        <div class="rounded shadow overflow-hidden">
+        <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63682.27193358074!2d14.320000000000002!3d10.5957627!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10f003a26330cd3d%3A0x1c926bc3c4530417!2sPharmacie%20Douggoi!5e0!3m2!1sfr!2scm!4v1721514000000!5m2!1sfr!2scm" 
+  width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

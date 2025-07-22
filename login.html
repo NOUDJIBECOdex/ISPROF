@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion - ISPROF</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/isprof_maroua.jpg" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen flex items-center justify-center px-4">
+
+  <div class="bg-white shadow-2xl rounded-2xl max-w-md w-full p-8 sm:p-10">
+    <div class="text-center mb-6">
+      <img src="images/isprof_maroua.jpg" alt="Logo ISPROF" class="w-20 mx-auto mb-4" />
+      <h1 class="text-2xl font-bold text-gray-800">Connexion Étudiant</h1>
+      <p class="text-sm text-gray-500">Accédez à votre espace personnel</p>
+    </div>
+
+    <form onsubmit="event.preventDefault(); alert('Simulation uniquement : aucun traitement réel');">
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-semibold mb-2" for="email">Adresse e-mail</label>
+        <input type="email" id="email" placeholder="etudiant@isprof.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+      </div>
+      <div class="mb-6">
+        <label class="block text-gray-700 text-sm font-semibold mb-2" for="password">Mot de passe</label>
+        <input type="password" id="password" placeholder="********" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+      </div>
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-300">
+        Se connecter
+      </button>
+    </form>
+
+    <p class="text-center text-sm text-gray-400 mt-6">
+      ⚠️ Simulation uniquement – la plateforme est en cours de développement.
+    </p>
+    <div class="text-center mt-4">
+      <a href="index.html" class="text-blue-600 hover:underline text-sm">← Retour au site</a>
+    </div>
+  </div>
+
+</body>
+</html>
